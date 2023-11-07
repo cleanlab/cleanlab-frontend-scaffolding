@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+
+import { mockLabelErrorsData } from "./api/labelErrorsApi";
+
+import "./App.css";
 
 function App() {
+  // Data to be shown in the table
+  const [tableData, setTableData] = useState(mockLabelErrorsData);
+
+  // Column headers
+  const tableHeaders = Object.keys(tableData[0]);
+
+  // Basic table scaffolding -- feel free to change whatever you like
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <table>
+      <thead>
+        <tr>
+          {tableHeaders.map((e) => (
+            <th key={e}>{e}</th>
+          ))}
+        </tr>
+      </thead>
+      <tbody>
+        {tableData.map((e) => (
+          <tr></tr>
+        ))}
+      </tbody>
+    </table>
   );
 }
 
