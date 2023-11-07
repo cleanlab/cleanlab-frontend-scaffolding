@@ -15,13 +15,13 @@ function App() {
   return (
     <table>
       <thead>
-        <tr>
-          {tableHeaders.map((e) => (
-            <th key={e}>{e}</th>
-          ))}
-        </tr>
+        {/* Table column headers */}
+        {tableHeaders.map((e) => (
+          <th key={e}>{e}</th>
+        ))}
       </thead>
       <tbody>
+        {/* Table rows */}
         {tableData.map((e) => (
           <tr></tr>
         ))}
