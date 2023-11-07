@@ -11,7 +11,7 @@ to change the starter code however you like before and/or during the interview. 
 to install any node packages and libraries you wish. For example, if you are more familiar with
 Axios, Chakra UI, Tailwind CSS, etc., you are welcome to install them beforehand and adjust the
 scaffolding as necessary. That said, no additional packages are necessary for the challenge 
-and vanilla JSX 
+and vanilla JSX is totally sufficient to complete the challenge.
 
 ## Available Scripts
 
