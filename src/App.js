@@ -1,15 +1,10 @@
-import { useState } from "react";
-
 import { mockLabelErrorsData } from "./api/labelErrorsApi";
 
 import "./App.css";
 
 function App() {
-  // Data to be shown in the table
-  const [tableData, setTableData] = useState(mockLabelErrorsData);
-
   // Column headers
-  const tableHeaders = Object.keys(tableData[0]);
+  const tableHeaders = Object.keys(mockLabelErrorsData[0]);
 
   // Basic table scaffolding -- feel free to change whatever you like
   return (
@@ -22,9 +17,14 @@ function App() {
       </thead>
       <tbody>
         {/* Table rows */}
-        {tableData.map((e) => (
-          <tr></tr>
-        ))}
+        {mockLabelErrorsData &&
+          mockLabelErrorsData.map((e) => (
+            <tr key={e.id}>
+              {tableHeaders.map((header, index) => (
+                <td key={e[header] + index}>{e[header]}</td>
+              ))}
+            </tr>
+          ))}
       </tbody>
     </table>
   );
