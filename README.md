@@ -3,8 +3,8 @@
 This project provides some starter code for the senior frontend technical challenge.
 You will gain access to a Notion doc that details challenge at the start of your interview.
 
-The starter code provides a basic scaffolding for a table with column headers, as well
-as mock api data that you will soon replace.
+The starter code provides a basic scaffolding for a table with column headers in App.js, as well
+as mock api data that you will soon replace in src/api/labelErrorsApi.js.
 
 The starter code is provided solely to save you time for the challenge itself -- you are free
 to change the starter code however you like before and/or during the interview. Feel free
